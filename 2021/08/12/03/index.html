@@ -20,30 +20,33 @@
     var CONFIG = {"hostname":"github.com","root":"/Shallow-River/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Deadline不是任务截止的前一天，而是开始它的后一天">
-<meta property="og:type" content="website">
-<meta property="og:title" content="浅河的小栈">
-<meta property="og:url" content="https://github.com/Shallow-River/index.html">
+  <meta name="description" content="一、private​    特点：保护成员不被别的类使用，被private修饰的成员只能于本类中访问 ​    而对于被private修饰的成员变量，若想被其他类使用，可使用public修饰的方法来间接引入，例如： 123public class Part01 &amp;#123;    private int age;&amp;#125;  如果想在下面的Demo类里使用age的值，就要添加如下方法： 1234">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简述Java中的访问权限（有关static,public,private,protected,this等常见关键词的使用）">
+<meta property="og:url" content="https://github.com/Shallow-River/2021/08/12/03/index.html">
 <meta property="og:site_name" content="浅河的小栈">
-<meta property="og:description" content="Deadline不是任务截止的前一天，而是开始它的后一天">
+<meta property="og:description" content="一、private​    特点：保护成员不被别的类使用，被private修饰的成员只能于本类中访问 ​    而对于被private修饰的成员变量，若想被其他类使用，可使用public修饰的方法来间接引入，例如： 123public class Part01 &amp;#123;    private int age;&amp;#125;  如果想在下面的Demo类里使用age的值，就要添加如下方法： 1234">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-12T11:15:32.000Z">
+<meta property="article:modified_time" content="2021-08-15T08:29:02.869Z">
 <meta property="article:author" content="浅河">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://github.com/Shallow-River/">
+<link rel="canonical" href="https://github.com/Shallow-River/2021/08/12/03/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>浅河的小栈 - 在自己的时区步步前行</title>
+  <title>简述Java中的访问权限（有关static,public,private,protected,this等常见关键词的使用） | 浅河的小栈</title>
   
 
 
@@ -144,104 +147,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Shallow-River/2021/08/12/02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Shallow-River/uploads/3817E11D2766396D0F7E00215A7F20BF.png">
-      <meta itemprop="name" content="浅河">
-      <meta itemprop="description" content="Deadline不是任务截止的前一天，而是开始它的后一天">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浅河的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Shallow-River/2021/08/12/02/" class="post-title-link" itemprop="url">简单评测几个常见集成开发环境（IDE）（新手入门向）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-12 19:25:00" itemprop="dateCreated datePublished" datetime="2021-08-12T19:25:00+08:00">2021-08-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-17 15:36:26" itemprop="dateModified" datetime="2021-08-17T15:36:26+08:00">2021-08-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>​    俗话说“工欲善其事，必先利其器”，笔者也是个在接触新领域的时候，喜欢折腾工具的人。记得刚刚学习编程的时候，天天尝鲜各种IDE，以至于写这篇文的时候，光各种各样的IDE，电脑上居然已经装了10+个相关软件了……（然而没有改变代码写的菜的现实）现在适逢新同学开学季，想必也有很多类似的问题，于是简单评测一下在这段时间我所简单了解过的一些工具的特点供大家选择，与大家分享啦～</p>
-<p>​    （注：初学者似乎都喜欢称这些工具为编译器，但事实上编译器是另外一个东西，而且貌似各位口中的“编译器”实际上也是指IDE，所以在此不细讲编译器究竟如何，直接说IDE的千秋，<strong>内容均为笔者主观感受，排名先后不代表推荐顺序</strong>，各位根据特点选择即可）</p>
-<p>  （另注：这些IDE笔者均未深度使用，受制于个人水平，所有主观感受的适用条件都仅限于做各种OJ练习题的程度，不过似乎也符合新人学习的状态hh，求各位高手轻喷哈）</p>
-<p>  （另另注：讨论的环境默认为**windows系统、重点讨论C/C++**的IDE，MAC OS没用过，Linux……虽然后期学深了都得去用，但新学者也暂时不会接触吧哈哈，不过会有相关内容标注，其他语言的也会捎带一提，不过新手在学校大部分也是C/C++入门，所以不重点说啦）</p>
-<h3 id="一：Dev-C"><a href="#一：Dev-C" class="headerlink" title="一：Dev-C++ "></a>一：Dev-C++ <img src="/Shallow-River/Shallow-River/2021/08/12/02/02%5Cdev.png"></h3><h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><p>​    1.安装包小，界面十分简洁。</p>
-<p>​    2.默认语言好像是中文？对新手极度友好，默认字体和界面看着也比较舒服。</p>
-<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><p>​    1.也只能是用于学习阶段使用了，“简洁”到很多功能性比较差，目前已基本弃用。</p>
-<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><p>​    把它放第一位纯属因为这是领着笔者进入编程世界的引路人，如果是跟着MOOC上浙大翁恺老师的网课（备注：入门听这个课很推荐哦）学的话，使用的也是这个IDE作范例，新手入门可用。</p>
-<h3 id="二：CodeBlocks（较推荐）-D-table-wenjian-屏幕截图-2021-07-21-171603-png"><a href="#二：CodeBlocks（较推荐）-D-table-wenjian-屏幕截图-2021-07-21-171603-png" class="headerlink" title="二：CodeBlocks（较推荐）![](D:\table_wenjian\屏幕截图 2021-07-21 171603.png)"></a>二：CodeBlocks（较推荐）![](D:\table_wenjian\屏幕截图 2021-07-21 171603.png)</h3><h5 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h5><p>​    1.自带了gcc编译器所以不需要自己折腾相关配置（光这一点就足够小白青睐了，毕竟毫无经验的新手在这一步上太容易迷茫了不是~）。</p>
-<p>​    2.功能完备，属于一个界面相对简洁同时功能又足够完备的IDE。</p>
-<h5 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h5><p>​    1.默认全英文（记得是），对英语不行的同学以及新接触编程的同学来说有些功能可能要花一点时间了解如何使用。</p>
-<p>​    2.界面及字体风格本人不太喜欢，视觉上一些使用体验并不好（纯主观感受），所以现在用的也很少。</p>
-<p>​    3.有些功能设计的操作上稍有些不够人性化。</p>
-<h5 id="总结：-1"><a href="#总结：-1" class="headerlink" title="总结："></a>总结：</h5><p>​    这个就比上一个用的多啦！也是HNUST上学时老师推荐的工具，包括据我所知很多ACM（算法竞赛)er也在用的IDE。如果是HNUST的同学的话，学校机房也是统一装的这个，学着用用很有必要哦~</p>
-<h3 id="三：VSCode（全称Visual-Studio-Code）-D-table-wenjian-屏幕截图-2021-07-21-171706-png"><a href="#三：VSCode（全称Visual-Studio-Code）-D-table-wenjian-屏幕截图-2021-07-21-171706-png" class="headerlink" title="三：VSCode（全称Visual Studio Code）![](D:\table_wenjian\屏幕截图 2021-07-21 171706.png)"></a>三：VSCode（全称Visual Studio Code）![](D:\table_wenjian\屏幕截图 2021-07-21 171706.png)</h3><h5 id="优点：-2"><a href="#优点：-2" class="headerlink" title="优点："></a>优点：</h5><p>​    1.由微软开发，是个能应用于实际工业生产的IDE，插件极多（各种小工具十分完善且实用），花点时间配置可以打造一个相当个性化且极舒适的代码书写环境。    </p>
-<p>​    2.字体、界面都比前两个精致太多，属于“正儿八经”的实战型IDE。</p>
-<p>​    3.相比较后面要介绍的，这个还算是“轻量级”的，对硬件吃的不算多。</p>
-<p>​    4.全平台通用，后续换其它系统时节约学习时间。</p>
-<h5 id="缺点：-2"><a href="#缺点：-2" class="headerlink" title="缺点："></a>缺点：</h5><p>​    1.需要完全自己配置相关环境（如编译器的安装）等，虽然这是学习编程必备的知识，但是课堂里老师不会教，新手需要花一些时间去查相关资料，弄不好的话有不能用的风险。（但是自己学习相关设置在我看来是十分有必要的事，所以也谈不上什么大缺点）。</p>
-<h5 id="总结：-2"><a href="#总结：-2" class="headerlink" title="总结："></a>总结：</h5><p>​    好用，就是刚上手得花点儿时间，有一定学习成本，总体收益远大于付出，十分值得。</p>
-<h3 id="四：VS2019（全称Visual-Studio-2019）（推荐）-D-table-wenjian-屏幕截图-2021-07-21-171806-png"><a href="#四：VS2019（全称Visual-Studio-2019）（推荐）-D-table-wenjian-屏幕截图-2021-07-21-171806-png" class="headerlink" title="四：VS2019（全称Visual Studio 2019）（推荐）![](D:\table_wenjian\屏幕截图 2021-07-21 171806.png)"></a>四：VS2019（全称Visual Studio 2019）（推荐）![](D:\table_wenjian\屏幕截图 2021-07-21 171806.png)</h3><h4 id="注：现在VS2022已经在推广了，但咱没上手用过所以暂且不评，应该是大同小异"><a href="#注：现在VS2022已经在推广了，但咱没上手用过所以暂且不评，应该是大同小异" class="headerlink" title="(注：现在VS2022已经在推广了，但咱没上手用过所以暂且不评，应该是大同小异)"></a>(注：现在VS2022已经在推广了，但咱没上手用过所以暂且不评，应该是大同小异)</h4><h5 id="优点：-3"><a href="#优点：-3" class="headerlink" title="优点："></a>优点：</h5><p>​    1.和上面的VSCode师出同门，也是目前网路上普遍认为Windows下“最强”C/C++的IDE，功能极强，断点调试功能设计的非常人性化。优点极多。</p>
-<p>​    2.比VSCode配置工具能简单些，插件这个另算，本身功能已经足够强大。</p>
-<p>​    3.同时支持Node.js，Web，Python……等一系列功能，下载对应功能包即可。</p>
-<h5 id="缺点：-3"><a href="#缺点：-3" class="headerlink" title="缺点："></a>缺点：</h5><p>​    1.体量庞大，动辄二位数G的硬盘占用相比其他工具算是个缺点，运行时对内存的占用也比较大（不过目前的电脑普遍运行起来还是没有什么压力的，顶多感觉跑程序比前几个稍慢一点）。</p>
-<h5 id="总结：-3"><a href="#总结：-3" class="headerlink" title="总结："></a>总结：</h5><p>​    地表最强不是说着玩儿的，这个可以作为“退烧”的IDE（笑），就是有一点点占地方，现在换平台后用的也少了。</p>
-<h3 id="五：Clion（入门不太推荐）-D-table-wenjian-屏幕截图-2021-07-21-171626-png"><a href="#五：Clion（入门不太推荐）-D-table-wenjian-屏幕截图-2021-07-21-171626-png" class="headerlink" title="五：Clion（入门不太推荐） ![](D:\table_wenjian\屏幕截图 2021-07-21 171626.png)"></a>五：Clion（入门不太推荐） ![](D:\table_wenjian\屏幕截图 2021-07-21 171626.png)</h3><h5 id="优点：-4"><a href="#优点：-4" class="headerlink" title="优点："></a>优点：</h5><p>​    1.JetBrains公司开发，JB全家桶的设计风格均类似，以后使用他家其他工具上手就比较容易，而且功能也十分强大，全平台通用，个人认为各方面功能不输VS2019。</p>
-<h5 id="缺点：-4"><a href="#缺点：-4" class="headerlink" title="缺点："></a>缺点：</h5><p>​    1.要付费！不便宜！虽然学生可以注册申请免费使用（有破解插件但不推荐），但是毕业以后如何是个问题（不过到时候也不会在乎这个钱吧……）。</p>
-<p>​    2.内存占用挺大的，和VS2019谁占的多没对比过，和其他的还是有明显差距。</p>
-<p>​    3.前期各种配置对小白并不很友好，而且使用逻辑和除了JetBrains公司的其他产品外不太一样，需要适应。</p>
-<h5 id="总结：-4"><a href="#总结：-4" class="headerlink" title="总结："></a>总结：</h5><p>​    这个是我自己现在用的，主要是因为自己还在用JB全家桶里的IDEA（Java IDE），PyCharm（Python IDE），使用逻辑比较统一，但是入门的话…还是先用用别的吧。</p>
-<p>​    考虑到新人入门大概都是学的C/C++，暂时就先以此语言为准，其他如JAVA，Python等暂且不展开细说，只是简谈我所了解的一些东西，非正经向评测，大家主要是看个乐呵，希望大家能挑到自己顺手的工具，然后一定把学习的精力重点投放在语言本身而非选择工具上，祝大家学业有成！ </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -257,10 +166,9 @@
       <meta itemprop="name" content="浅河的小栈">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Shallow-River/2021/08/12/03/" class="post-title-link" itemprop="url">简述Java中的访问权限（有关static,public,private,protected,this等常见关键词的使用）</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          简述Java中的访问权限（有关static,public,private,protected,this等常见关键词的使用）
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -290,7 +198,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="一、private"><a href="#一、private" class="headerlink" title="一、private"></a>一、private</h3><p>​    特点：保护成员不被别的类使用，被private修饰的成员<strong>只能于本类中访问</strong></p>
+        <h3 id="一、private"><a href="#一、private" class="headerlink" title="一、private"></a>一、private</h3><p>​    特点：保护成员不被别的类使用，被private修饰的成员<strong>只能于本类中访问</strong></p>
 <p>​    而对于被private修饰的成员变量，若想被其他类使用，可使用<em>public</em>修饰的方法来间接引入，例如：</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="symbol">Part01</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -317,88 +225,47 @@
 
 <p>​    输出结果呢？仍然是5！</p>
 
-      
     </div>
 
     
     
     
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/Shallow-River/tags/Java/" rel="tag"># Java</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Shallow-River/2021/07/11/%E5%89%8D%E8%A8%80%E2%80%94%E2%80%94%E6%9C%89%E5%85%B3%E5%88%9B%E5%BB%BA%E5%B0%8F%E7%AB%99%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E5%8F%97/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Shallow-River/uploads/3817E11D2766396D0F7E00215A7F20BF.png">
-      <meta itemprop="name" content="浅河">
-      <meta itemprop="description" content="Deadline不是任务截止的前一天，而是开始它的后一天">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="浅河的小栈">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Shallow-River/2021/07/11/%E5%89%8D%E8%A8%80%E2%80%94%E2%80%94%E6%9C%89%E5%85%B3%E5%88%9B%E5%BB%BA%E5%B0%8F%E7%AB%99%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E5%8F%97/" class="post-title-link" itemprop="url">前言——有关创建小站的一点感受</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-11 19:11:57" itemprop="dateCreated datePublished" datetime="2021-07-11T19:11:57+08:00">2021-07-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-12 19:14:23" itemprop="dateModified" datetime="2021-08-12T19:14:23+08:00">2021-08-12</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>​    时常听说这样一句话：“ 输出倒逼输入。” 随着学习经历的丰富，越发能感到这句话的厉害，也因此萌生了记录自己的学习轨迹的想法。所以在这里简记一点学习的计划（书单），学习心得等等，希望能够在回味之际，能惊觉到不知不觉间，已是读书百卷，行程万里。倘若能给看到他们的人一点点启发，则更加不胜荣幸。</p>
-<p>​    而“小栈”这个名字的来由呢，有诸多原因；一方面“栈”与“站”同音，故“小栈”即“小站”；另一方面，数据结构中也有一名为“栈”，笔者希望自己的知识也能够如源头活水般频繁地进栈、出栈（巧合的是，网站的显示逻辑恰好为最新写入的文章展示于最上层，这个特点与“栈”这一结构的特点不谋而合）；同时也是对笔者家乡一处名景点留为记忆（青岛的海畔——栈桥）</p>
-<p>​    内容有关于学习编程路上所需要看的书籍，一些知识的个人总结，还有一些感悟与见解，也会放一些本人在学习路上的见闻以供参考，希望有缘的人能够从这里得到自己想要的知识，祝大家学业有成！</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Shallow-River/2021/07/11/%E5%89%8D%E8%A8%80%E2%80%94%E2%80%94%E6%9C%89%E5%85%B3%E5%88%9B%E5%BB%BA%E5%B0%8F%E7%AB%99%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E5%8F%97/" rel="prev" title="前言——有关创建小站的一点感受">
+      <i class="fa fa-chevron-left"></i> 前言——有关创建小站的一点感受
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Shallow-River/2021/08/12/02/" rel="next" title="简单评测几个常见集成开发环境（IDE）（新手入门向）">
+      简单评测几个常见集成开发环境（IDE）（新手入门向） <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -451,6 +318,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81private"><span class="nav-number">1.</span> <span class="nav-text">一、private</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%BB%98%E8%AE%A4%E6%83%85%E5%86%B5%EF%BC%88%E5%8D%B3%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E5%8A%A0%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">二、默认情况（即什么都不加）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81this"><span class="nav-number">3.</span> <span class="nav-text">三、this</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
